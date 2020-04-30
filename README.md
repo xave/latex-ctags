@@ -5,11 +5,11 @@ Tags will be generated for:
 
 DOCUMENT SECTIONS
 ----------------
-* parts as PART <entry>
-* chapters as CHAP <entry>
-* sections as . <entry>
-* subsections .. <entry>
-* subsubsections ... <entry>
+* parts as PART *entry* 
+* chapters as CHAP *entry* 
+* sections as . *entry* 
+* subsections .. *entry* 
+* subsubsections ... *entry* 
 
 * table of contents as TABLE OF CONTENTS
 * frontmatter as FRONTMATTER
@@ -19,32 +19,32 @@ DOCUMENT SECTIONS
 
 GRAPHICS AND LISTINGS
 ----------------
-* includegraphics as GL <entry>
-* lstinputlisting as GL <entry>
+* includegraphics as GL *entry* 
+* lstinputlisting as GL *entry* 
 
 LABELS
 ----------------
-* label as LABEL <entry>
-* reference as LABEL <entry>
-* pageref as LABEL <entry>
+* label as LABEL *entry* 
+* reference as LABEL *entry* 
+* pageref as LABEL *entry* 
 
 DEFINITIONS
 ----------------
-* math definitions as DEFINITION <entry>
-* math theorems as THEOREM <entry>
+* math definitions as DEFINITION *entry* 
+* math theorems as THEOREM *entry* 
 
 COMMANDS
 ----------------
-* \newcommand as NEW COMMAND <entry>
-* \renewcommand as RENEW COMMAND <entry>
-* \providecommand as PROVIDE COMMAND <entry>
-* \DeclareRobustCommand as DECLARE ROBUST COMMAND <entry>
-* \CheckCommand as CHECK COMMAND <entry>
+* \newcommand as NEW COMMAND *entry* 
+* \renewcommand as RENEW COMMAND *entry* 
+* \providecommand as PROVIDE COMMAND *entry* 
+* \DeclareRobustCommand as DECLARE ROBUST COMMAND *entry* 
+* \CheckCommand as CHECK COMMAND *entry* 
 
 ENVIRONMENTS
 ----------------
-* \newenvironment as NEW ENVIRONMENT <entry>
-* \renewenvironment as RENEW ENVIRONMENT <entry>
+* \newenvironment as NEW ENVIRONMENT *entry* 
+* \renewenvironment as RENEW ENVIRONMENT *entry* 
  
 ## Special symbols and generated tags
 The above generates the tags file that one would expect, however; the default ctags integration with vim does not like commands with special characters such as `\newcommand{@my@command}`. The ctags command will correctly add `@my@command` as type `NEW COMMAND` to the tags file, but vim will not autocomplete to it. As the use of the `@` symbol is convention in commands that the user of a class, style, or definition file is not suppsed to use (protecting the command), it is desired that these can be autocompleted since they are used in many of such files already. A further exercise is to investigate making this work as desired. 
